@@ -13,10 +13,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { CategroyType } from "./layouts/Categories";
 import { men } from "./utils/data";
-import { stringReform } from "./utils/lib";
 import { getCategory } from "./utils/serverReq";
 
 const Home = async () => {
+  const stringReform = (str: string) => str.replace(/\s+/g, "-").toLowerCase();
   const categories = await getCategory();
   return (
     <div className="container mx-auto pt-10 max-sm:px-10">
