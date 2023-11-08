@@ -16,7 +16,6 @@ const config: Config = {
           900: "#F7F8FA",
         },
       },
-      container: {},
     },
   },
   plugins: [],
