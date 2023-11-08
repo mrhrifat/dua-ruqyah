@@ -17,7 +17,10 @@ export async function GET(
   { params }: { params: { id: number } }
 ) {
   const { id } = params;
-  await connectMongoDB();
-  const subcategories = await SubCategory.find({ cat_id: id });
-  return NextResponse.json({ subcategories }, { status: 200 });
+  if (id) {
+    await connectMongoDB();
+    const subcategories = await SubCategory.find({ cat_id: id });
+    return NextResponse.json({ subcategories }, { status: 200 });
+  }
+  return NextResponse.json({ message: "Server Error" }, { status: 500 });
 }
