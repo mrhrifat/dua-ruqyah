@@ -20,7 +20,7 @@ export async function GET(
   const { id } = params;
   if (id) {
     await connectMongoDB();
-    const duas = Dua.find({ cat_id: id });
+    const duas = await Dua.find({ cat_id: id });
     return NextResponse.json({ duas }, { status: 200 });
   }
   return NextResponse.json({ message: "Server Error" }, { status: 500 });
