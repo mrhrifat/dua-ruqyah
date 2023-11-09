@@ -11,19 +11,20 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { stringReform } from "./components/CategoryCard";
 import { CategroyType } from "./layouts/Categories";
+import Header from "./layouts/Header";
 import { men } from "./utils/data";
 import { getCategory } from "./utils/serverReq";
 
 const Home = async () => {
-  const stringReform = (str: string) => str.replace(/\s+/g, "-").toLowerCase();
   const categories = await getCategory();
   return (
     <div className="container mx-auto pt-10 max-sm:px-10">
-      <div className="py-10">
-        <p className="text-center text-3xl font-bold text-primary-900">Dua</p>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+      <header className="max-sm:hidden">
+        <Header />
+      </header>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 pt-10">
         {categories.map((item: CategroyType) => (
           <Link
             key={item.cat_id}
