@@ -11,7 +11,7 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
-import { poppins } from "./utils/font";
+import { inter } from "./utils/font";
 
 export const metadata: Metadata = {
   title: "Dua Ruqyah",
@@ -29,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} bg-light-900 scroll-smooth`}>
+      <body className={`${inter.className} bg-light-900 scroll-smooth`}>
         {children}
       </body>
     </html>
