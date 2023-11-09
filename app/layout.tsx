@@ -31,7 +31,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-light-900`}>{children}</body>
+      <body className={`${inter.className} bg-light-900 scroll-smooth`}>
+        {children}
+      </body>
     </html>
   );
 }
