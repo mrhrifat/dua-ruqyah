@@ -16,7 +16,7 @@ import Settings from "../layouts/Settings";
 
 const layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="container mx-auto xl:px-4 2xl 2xl:px-4 max-sm:px-10">
+    <div className="container mx-auto 2xl  max-sm:px-5">
       <div className="grid grid-cols-12 gap-x-8 gap-y-4 pt-6">
         <div className="col-span-1 hidden xl:block">
           <Menu />
