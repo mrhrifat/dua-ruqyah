@@ -20,7 +20,7 @@ import { getCategory } from "./utils/serverReq";
 const Home = async () => {
   const categories = await getCategory();
   return (
-    <div className="container mx-auto pt-10 max-sm:px-10">
+    <div className="container mx-auto pt-10 max-sm:px-5">
       <header className="max-sm:hidden">
         <Header />
       </header>
