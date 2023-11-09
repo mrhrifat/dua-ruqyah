@@ -38,8 +38,8 @@ export const getSubCategory = async (id: number) => {
 };
 
 // Get Dua
-export const getDua = async () => {
-  const { duas } = await fetch(`${baseUri}/dua`, { cache: "no-store" })
+export const getDuas = async (id: number) => {
+  const { duas } = await fetch(`${baseUri}/dua/${id}`, { cache: "no-store" })
     .then((res) => {
       return res.json();
     })
