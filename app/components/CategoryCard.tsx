@@ -15,11 +15,15 @@ import { CategroyType } from "../layouts/Categories";
 import { men } from "../utils/data";
 import SubCategories from "./SubCategories";
 
+export const stringReform = (str: string) =>
+  str.replace(/\s+/g, "-").toLowerCase();
+
 const CategoryCard = ({ item, cat }: { item: CategroyType; cat: string }) => {
   return (
     <Link
       key={item.cat_id}
       href={{
+        pathname: `/duas/${stringReform(item.cat_name_en)}`,
         query: {
           cat: item.cat_id,
         },
