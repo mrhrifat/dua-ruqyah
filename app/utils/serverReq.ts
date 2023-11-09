@@ -9,13 +9,14 @@
  *
  */
 
-import { baseUri } from "./data";
-
 // Get Category
 export const getCategory = async () => {
-  const { categories } = await fetch(`${baseUri}/category`, {
-    cache: "no-store",
-  })
+  const { categories } = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URI}/category`,
+    {
+      cache: "no-store",
+    }
+  )
     .then((res) => {
       return res.json();
     })
@@ -26,9 +27,12 @@ export const getCategory = async () => {
 
 // Get Sub Category
 export const getSubCategory = async (id: number) => {
-  const { subcategories } = await fetch(`${baseUri}/subCategory/${id}`, {
-    cache: "no-store",
-  })
+  const { subcategories } = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URI}/subCategory/${id}`,
+    {
+      cache: "no-store",
+    }
+  )
     .then((res) => {
       return res.json();
     })
@@ -39,7 +43,12 @@ export const getSubCategory = async (id: number) => {
 
 // Get Dua
 export const getDuas = async (id: number) => {
-  const { duas } = await fetch(`${baseUri}/dua/${id}`, { cache: "no-store" })
+  const { duas } = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URI}/dua/${id}`,
+    {
+      cache: "no-store",
+    }
+  )
     .then((res) => {
       return res.json();
     })
