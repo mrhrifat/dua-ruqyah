@@ -21,7 +21,7 @@ const Home = async () => {
   const categories = await getCategory();
   return (
     <div className="container mx-auto pt-10 max-sm:px-5">
-      <header className="max-sm:hidden">
+      <header>
         <Header />
       </header>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 pt-10">
