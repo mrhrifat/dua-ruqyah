@@ -1,5 +1,3 @@
-import { Poppins } from "next/font/google";
-
 /**
  * Title: font
  * Description:
@@ -10,8 +8,10 @@ import { Poppins } from "next/font/google";
  * Last Updated Date: Nov 09, 2023
  *
  */
-export const poppins = Poppins({
+
+import { Inter } from "next/font/google";
+
+export const inter = Inter({
   subsets: ["latin"],
-  display: "auto",
-  weight: ["100", "300"],
+  display: "swap",
 });
