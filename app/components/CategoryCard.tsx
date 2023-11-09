@@ -11,9 +11,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { CategroyType } from "../layouts/Categories";
+import { SubCategories } from ".";
 import { men } from "../utils/data";
-import SubCategories from "./SubCategories";
+import { CategroyType } from "../utils/type";
 
 export const stringReform = (str: string) =>
   str.replace(/\s+/g, "-").toLowerCase();

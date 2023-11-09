@@ -1,5 +1,16 @@
+/**
+ * Title: Section
+ * Description:
+ * Filename: Section.tsx
+ * Path: /app/components/Section.tsx
+ * Author: Mrh Rifat (Programmer)
+ * Created Date: Nov 09, 2023
+ * Last Updated Date: Nov 09, 2023
+ *
+ */
+
 import { getSubCategory } from "../utils/serverReq";
-import { SubCategoryType } from "./SubCategories";
+import { SubCategoryType } from "../utils/type";
 
 const Section = async ({ cat, subcat }: { cat: number; subcat: number }) => {
   const subcategories = await getSubCategory(cat);

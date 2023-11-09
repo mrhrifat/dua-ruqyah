@@ -10,15 +10,7 @@
  */
 
 import { getSubCategory } from "../utils/serverReq";
-
-export type SubCategoryType = {
-  id: number;
-  cat_id: number;
-  subcat_id: number;
-  subcat_name_bn: string;
-  subcat_name_en: string;
-  no_of_dua: number;
-};
+import { SubCategoryType } from "../utils/type";
 
 const SubCategories = async ({ cat_id }: { cat_id: number }) => {
   const subCategories = await getSubCategory(cat_id);
