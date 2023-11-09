@@ -13,6 +13,7 @@ import connectMongoDB from "@/app/utils/mongodb";
 import SubCategory from "@/models/subCategory";
 import { NextResponse } from "next/server";
 
+// 1st POST Method
 export async function POST(request: any) {
   const { id, cat_id, subcat_id, subcat_name_bn, subcat_name_en, no_of_dua } =
     await request.body;
@@ -33,6 +34,17 @@ export async function POST(request: any) {
   }
   return NextResponse.json({ message: "Insert Value", status: "200" });
 }
+
+// 2nd POST Method
+
+// export async function POST(request: any) {
+//   await connectMongoDB();
+//   await SubCategory.insertMany();
+//   return NextResponse.json({
+//     message: "Created Successfully",
+//     status: "201",
+//   });
+// }
 
 export async function GET() {
   await connectMongoDB();

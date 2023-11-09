@@ -13,6 +13,7 @@ import Category from "@/models/category";
 import { NextResponse } from "next/server";
 import connectMongoDB from "../../utils/mongodb";
 
+// 1st POST Method
 export async function POST(request: any) {
   const {
     id,
@@ -41,6 +42,17 @@ export async function POST(request: any) {
   }
   return NextResponse.json({ message: "Insert Value", status: "200" });
 }
+
+// 2nd POST Method
+
+// export async function POST(request: any) {
+//   await connectMongoDB();
+//   await Category.insertMany();
+//   return NextResponse.json({
+//     message: "Created Successfully",
+//     status: "201",
+//   });
+// }
 
 export async function GET() {
   await connectMongoDB();
