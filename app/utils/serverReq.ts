@@ -26,7 +26,7 @@ export const getCategory = async () => {
 };
 
 // Get Sub Category
-export const getSubCategory = async (id: number) => {
+export const getSubCategory = async (id: number | 1) => {
   const { subcategories } = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URI}/subCategory/${id}`,
     {
@@ -42,7 +42,7 @@ export const getSubCategory = async (id: number) => {
 };
 
 // Get Dua
-export const getDuas = async (id: number) => {
+export const getDuas = async (id: number | 1) => {
   const { duas } = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URI}/dua/${id}`,
     {
