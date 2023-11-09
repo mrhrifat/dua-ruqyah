@@ -12,7 +12,7 @@
 import { donate, logo } from "@/app/utils/data";
 import Image from "next/image";
 import Link from "next/link";
-import MenuItem from "../components/MenuItem";
+import { MenuItem } from "../components";
 
 const Menu = () => {
   return (

@@ -10,17 +10,8 @@
  */
 
 import { getCategory } from "@/app/utils/serverReq";
-import CategoryCard from "../components/CategoryCard";
-
-export type CategroyType = {
-  id: number;
-  cat_id: number;
-  cat_name_bn: string;
-  cat_name_en: string;
-  no_of_subcat: number;
-  no_of_dua: number;
-  cat_icon: string;
-};
+import { CategoryCard } from "../components";
+import { CategroyType } from "../utils/type";
 
 const Categories = async ({ cat }: { cat: string }) => {
   const categories = await getCategory();
