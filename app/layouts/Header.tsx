@@ -16,10 +16,10 @@ const Header = () => {
   return (
     <div className="flex flex-row items-center">
       <div className="grow">
-        <p className="text-2xl">Dua Pages</p>
+        <p className="text-2xl text-primary-600 font-bold">Dua Pages</p>
       </div>
       <div className="flex items-center gap-x-28">
-        <div className="relative flex">
+        <div className="relative hidden md:flex">
           <input
             type="text"
             name="dua"

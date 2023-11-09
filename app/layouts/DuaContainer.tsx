@@ -38,7 +38,7 @@ export type DuaType = {
 };
 
 const DuaContainer = async ({ cat }: { cat: string }) => {
-  const duas = await getDuas(+cat);
+  const duas = await getDuas(+cat | 1);
 
   return duas.map((item: DuaType) => (
     <>
