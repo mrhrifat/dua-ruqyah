@@ -10,10 +10,8 @@
  */
 
 import { ReactNode } from "react";
-import MenuItem from "../components/MenuItem";
-import Header from "../layouts/Header";
-import Menu from "../layouts/Menu";
-import Settings from "../layouts/Settings";
+import { MenuItem } from "../components";
+import { Header, Menu, Settings } from "../layouts";
 
 const layout = ({ children }: { children: ReactNode }) => {
   return (

@@ -9,13 +9,15 @@
  *
  */
 
-import Categories from "../../layouts/Categories";
-import DuaContainer from "../../layouts/DuaContainer";
+import { Categories, DuaContainer } from "@/app/layouts";
 
 const page = ({ searchParams }: { searchParams: { cat: string } }) => {
-  console.log(searchParams);
   return (
     <>
+      <div className="block lg:hidden">
+        <button>Show</button>
+        <p></p>
+      </div>
       <div className="hidden lg:block col-span-4 lg:col-span-4 2xl:col-span-3">
         <Categories cat={searchParams.cat} />
       </div>
