@@ -12,10 +12,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { stringReform } from "./components/CategoryCard";
-import { CategroyType } from "./layouts/Categories";
-import Header from "./layouts/Header";
+import { Header } from "./layouts";
 import { men } from "./utils/data";
 import { getCategory } from "./utils/serverReq";
+import { CategroyType } from "./utils/type";
 
 const Home = async () => {
   const categories = await getCategory();
