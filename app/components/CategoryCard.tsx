@@ -32,7 +32,13 @@ const CategoryCard = ({ item, cat }: { item: CategroyType; cat: string }) => {
       <div className="px-3">
         <div className="flex flex-row gap-x-3 bg-slate-300 items-center p-2 rounded-md">
           <div className="bg-slate-200 rounded-md">
-            <Image src={men} alt="" className="w-14 h-14 mx-auto p-2" />
+            <Image
+              src={men}
+              alt="Men"
+              width={56}
+              height={56}
+              className="w-14 h-14 mx-auto p-2"
+            />
           </div>
           <div className="flex flex-row w-full justify-between">
             <div>
