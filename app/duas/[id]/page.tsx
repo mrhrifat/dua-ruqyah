@@ -19,7 +19,7 @@ const page = ({ searchParams }: { searchParams: { cat: string } }) => {
       <div className="hidden lg:block col-span-4 lg:col-span-4 2xl:col-span-3">
         <Categories cat={searchParams.cat} />
       </div>
-      <div className="col-span-12 lg:col-span-8 2xl:col-span-6">
+      <div className="col-span-12 lg:col-span-8 2xl:col-span-6 h-[89vh] overflow-y-auto">
         <DuaContainer cat={searchParams.cat} />
       </div>
     </>
