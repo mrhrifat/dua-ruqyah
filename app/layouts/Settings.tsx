@@ -14,7 +14,7 @@ import Image from "next/image";
 
 const Settings = () => {
   return (
-    <div className="flex flex-col bg-white rounded-3xl p-4">
+    <div className="flex flex-col bg-white rounded-3xl p-4 h-[87vh]">
       <div>
         <p className="text-lg text-center py-3">Settings</p>
       </div>

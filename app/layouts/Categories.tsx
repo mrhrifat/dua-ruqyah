@@ -26,21 +26,21 @@ const Categories = async ({ cat }: { cat: string }) => {
   const categories = await getCategory();
 
   return (
-    <div className="bg-white flex flex-col rounded-lg pb-10 gap-y-6 drop-shadow-md">
+    <div className="bg-white flex flex-col rounded-lg pb-5 gap-y-6 drop-shadow-md h-[87vh]">
       <div className="bg-primary-900 rounded-tr-lg rounded-tl-lg w-full">
         <p className="text-white p-3 text-center">Categories</p>
       </div>
       <div className="px-3">
         <input
           type="text"
-          name="dua"
-          id="dua"
+          name="categories"
+          id="categories"
           className="bg-white text-gray-900 w-full py-3 px-6 placeholder:text-gray-400  focus:ring-1 focus:ring-inset focus:ring-primary-900 focus-visible:outline-none rounded-md drop-shadow"
           placeholder="Search by Categories..."
         />
       </div>
 
-      <div className="flex flex-col gap-y-3 h-[48vh] overflow-auto">
+      <div className="flex flex-col gap-y-3 overflow-y-auto">
         {categories.map((item: CategroyType) => (
           <CategoryCard item={item} key={item.cat_id} cat={cat} />
         ))}

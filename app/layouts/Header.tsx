@@ -9,7 +9,7 @@
  *
  */
 
-import { bottomarrow, profile, search } from "@/app/utils/data";
+import { bottomarrow, profile, search, setting } from "@/app/utils/data";
 import Image from "next/image";
 
 const Header = () => {
@@ -46,6 +46,16 @@ const Header = () => {
             height={12}
             className="w-3 h-3"
           />
+
+          <div className="hidden max-2xl:block">
+            <Image
+              src={setting}
+              alt="Setting"
+              width={24}
+              height={24}
+              className="h-6 w-6"
+            />
+          </div>
         </div>
       </div>
     </div>

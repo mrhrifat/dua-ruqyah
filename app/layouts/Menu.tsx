@@ -15,7 +15,7 @@ import Link from "next/link";
 
 const Menu = () => {
   return (
-    <div className="bg-white rounded-3xl drop-shadow-md flex flex-col justify-between">
+    <div className="bg-white rounded-3xl drop-shadow-md flex flex-col justify-between h-[95vh]">
       <Link href="/">
         <Image src={logo} alt="Logo" className="w-28 h-28" />
       </Link>
