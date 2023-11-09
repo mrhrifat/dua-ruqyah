@@ -16,7 +16,7 @@ import { getDuas } from "../utils/serverReq";
 import { DuaType } from "../utils/type";
 
 const DuaContainer = async ({ cat }: { cat: string }) => {
-  const duas = await getDuas(+cat | 1);
+  const duas = await getDuas(+cat);
 
   return duas.map((item: DuaType) => (
     <>
